@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Chatbot</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&display=swap" />
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- PDF.js -->
+  <script src="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.min.js"></script>
+
+  <!-- Emoji Picker Module -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
+</head>
+<body>
+  <!-- Toggle Button -->
+  <button id="chatbot-toggler">
+    <span class="material-symbols-rounded open-icon">chat</span>
+    <span class="material-symbols-rounded close-icon">close</span>
+  </button>
+
+  <!-- Chatbot Window -->
+  <div class="chatbot-popup">
+    <div class="chat-header">
+      <div class="header-info">
+        <div class="bot-icon-circle">
+          <span class="material-symbols-outlined">robot_2</span>
+        </div>
+        <h2 class="logo-text">Chatbot</h2>
+      </div>
+      <button id="close-chatbot" class="material-symbols-rounded">close</button>
+    </div>
+
+    <div class="chat-body">
+      <div class="message bot-message">
+        <div class="bot-icon-circle">
+          <span class="material-symbols-outlined">robot_2</span>
+        </div>
+        <div class="message-text">Hey there! 👋<br>How can I help you today?</div>
+      </div>
+    </div>
+
+    <div class="chat-footer">
+      <form class="chat-form">
+        <textarea class="message-input" placeholder="Message..."></textarea>
+        <input type="file" id="file-input" accept=".pdf" hidden />
+        <div class="chat-controls">
+          <button type="button" id="emoji-btn">😄</button>
+          <button type="button" id="file-upload">📎</button>
+          <button type="submit">⬆️</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Emoji Picker -->
+  <emoji-picker></emoji-picker>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
